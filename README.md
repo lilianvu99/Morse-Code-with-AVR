@@ -1,2 +1,19 @@
 # Morse-Code-with-AVR
-Lab 1 was a more complex version of Lab 0. Lab 0 was getting started with the Atmel Studio IDE and the board where the output light on the board would turn on and off infinitely. Lab 1 was to exploit that and make a morse code with the dot, dash, space functions. The morse code had to spell out my first name, last name, and my Red ID number. The dot, dash, and space would stay on based on the milliseconds that are required.  a description of the results, even if it doesn't work, For the lab, I did not have much difficulty with the code but it was tedious to input every letter of the alphabet and number based on the morse code. I also displayed to output pin to PORTB3 instead of PORTB5. Once I fixed the number, the code was able to run. Initially the light would flicker just the letter L infinitely instead of my whole name. It turns out that I did not include the i++ to iterate the next character in my while loop. After I added the i++, my code was running perfectly. It only runs once instead of an infinite loop. 
+For this assignment, you are required to write code that outputs an arbitrary string by blinking
+the LED in Morse code. Make your Name and Red ID blink in Morse Code on the AVR Xplained
+mini 328 board. The method you choose must capable of outputting any standard nullterminated string containing characters A-Z or 0-9 in Morse code on the board's LED.
+For the demo, a child function, called from main( ) should output your name and Red ID number
+in Morse code, using a method that will work for any arbitrary string constant (in other words,
+main should pass the address of the null terminated ASCII string to the child function).
+The program is recommended to have different functions for dot, dash, and spacing. (The
+functions can be called based on the desired output.) Using functions make it simple to design
+multiple outputs, as you simply call on what you need whenever.
+Assume, one unit of time for this program will be 200ms.
+Ø A dot is equivalent one unit (200ms)
+Ø A dash is equivalent to three units (600ms)
+Ø The space between the dot/dash units of the same letter is one unit (200ms)
+Ø The space between different letters is three units (600ms)
+Ø The space between words is seven units (1400ms)
+The program should treat your input as one string, and put a longer space between the first
+letter of each word.
+The program is intended to run in an endless loop.
